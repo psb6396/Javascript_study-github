@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script></script>
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let output = ''
+         for (i = 5; i > 0; i--) {
+            for (k = 4; k >= i; k--) {
+               output += ' '
+            }
+            for (j = 0; j < i; j++) {
+               output += '*'
+            }
+            output += '\n'
+         }
+         console.log(output)
+      </script>
+   </body>
 </html>
