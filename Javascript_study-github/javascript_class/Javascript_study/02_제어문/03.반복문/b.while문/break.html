@@ -7,8 +7,14 @@
    </head>
    <body>
       <script>
-         for (i = 0; i < 10; i = i + 2) {
-            console.log(i)
+         for (let i = 0; true; i++) {
+            alert(i + '번째 반복입니다')
+
+            const isContinue = confirm('계속하시겠습니까?')
+
+            if (!isContinue) {
+               break
+            }
          }
       </script>
    </body>

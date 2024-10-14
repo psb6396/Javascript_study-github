@@ -7,7 +7,13 @@
    </head>
    <body>
       <script>
-         for (i = 0; i < 10; i = i + 2) {
+         let output = 0
+
+         //1 ~ 10 까지의
+         for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 1) {
+               continue
+            }
             console.log(i)
          }
       </script>
