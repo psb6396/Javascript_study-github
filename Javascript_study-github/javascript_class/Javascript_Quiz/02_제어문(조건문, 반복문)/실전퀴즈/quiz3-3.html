@@ -9,7 +9,10 @@
       <script>
          let output = ''
          for (i = 1; i < 5; i++) {
-            for (j = 1; j < 2 * i; i++) {
+            for(k = 0; k < 5 - i; k++){ //이상태로는 i 한바퀴 돌때마다 k=4로 싹다 초기화됨.
+               output += ' '
+            }
+            for (j = 1; j < 2 * i; j++) {
                output += '*'
             }
             output += '\n'
