@@ -7,8 +7,14 @@
    </head>
    <body>
       <script>
-         const num = prompt('숫자를 입력하세요.', 0)
-
+         const num = Number(prompt('숫자를 입력하세요.', 0))
+         const twice = (num) => {
+            if (num % 2 === 0) {
+               alert('짝수입니다')
+            } else {
+               alert('홀수입니다')
+            }
+         }
          twice(num)
       </script>
    </body>
