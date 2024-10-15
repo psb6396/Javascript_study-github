@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <script>
-      const max = function (array) {};
+   <head>
+      <title>asdf</title>
+      <script>
+         const max = function (array) {
+            var maximum_value = array[0]
+            array.forEach((element) => {
+               if (element > maximum_value) {
+                  maximum_value = element
+               }
+            })
+            return maximum_value
+         }
 
-      console.log(max([1, 2, 3, 4]));
-    </script>
-  </head>
-  <body></body>
+         console.log(max([1, 541654, 2, 3, 98798798987, 4]))
+      </script>
+   </head>
+   <body></body>
 </html>
