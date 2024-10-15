@@ -10,6 +10,19 @@
       <script>
          const height = 180
          const weight = 80
+         const proper_weight = (height, weight) => (height - 100) * 0.9
+         function bmi_calc(height, weight) {
+            bmi = weight / ((height * height) / 10000)
+            if (bmi < 20) {
+               console.log('저체중')
+            } else if (bmi <= 25) {
+               console.log('정상')
+            } else if (bmi <= 29) {
+               console.log('과체중')
+            } else if (bmi <= 39) {
+               console.log('비만')
+            }
+         }
       </script>
    </body>
 </html>
