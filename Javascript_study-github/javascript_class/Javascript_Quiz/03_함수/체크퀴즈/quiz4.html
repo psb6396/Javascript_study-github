@@ -7,10 +7,11 @@
    </head>
    <body>
       <script>
-         var sum = 0
+         var sum = 0 // 여기가 수정돼서 이전의 값이 남아버림.
          function sumAll(...items) {
-            for (var item in items) {
-               sum += items[item]
+            var sum = 0 //0으로 매번 초기화
+            for (var item of items) {
+               sum += item
             }
             return sum
          }
