@@ -12,6 +12,9 @@
             //filter로 먼저 걸르고 그다음에 map으로 수정
             if (price < 100) {
                price = '할인'
+               return price
+            } else {
+               return price
             }
          })
          console.log(new_prices)
