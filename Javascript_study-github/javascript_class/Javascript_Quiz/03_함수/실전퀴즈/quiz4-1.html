@@ -9,7 +9,6 @@
       <script>
          const prices = [150, 50, 70, 200]
          new_prices = prices.map((price) => {
-            //filter로 먼저 걸르고 그다음에 map으로 수정
             if (price < 100) {
                price = '할인'
                return price

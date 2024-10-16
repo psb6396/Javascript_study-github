@@ -9,6 +9,12 @@
       <script>
          const roles = ['user', 'admin', 'user', 'admin']
          const emails = ['alice@example.com', 'bob@example.com', 'charlie@example.com', 'david@example.com']
+
+         admin_index = roles.map((role, index) => {
+            if (role === 'admin') {
+               return index
+            }
+         })
       </script>
    </body>
 </html>
