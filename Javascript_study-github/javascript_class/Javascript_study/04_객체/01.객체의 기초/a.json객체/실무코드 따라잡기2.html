@@ -95,9 +95,25 @@
          const dramas = data.result
 
          //1. 드라마 제목, 줄거리, 주연배우만 모두 출력해주세요.
-         dramas.forEach((drama) => {
-            document.write(`<p>제목: ${drama.title} |줄거리:${drama.synopsis}|주연배우:${drama.cast[0]}, ${drama.cast[1]} </p>`)
-         })
+         //  dramas.forEach((drama) => {
+         //     document.write(`<p>제목: ${drama.title} |줄거리:${drama.synopsis}|주연배우:${drama.cast[0]}, ${drama.cast[1]} </p>`)
+         //  })
+
+         //2. 드라마 장르 중 판타지에 해당하는 드라마 제목만 출력
+         document.write(`<hr/>`)
+         document.write(`<h2>판타지 드라마</h2>`)
+
+         //  const result1 = dramas.filter((drama) => {
+         //     const genres = drama.genre
+         //     // console.log(genre)
+         //     for (const genre of genres) {
+         //        if (genre === '판타지') {
+         //           return true
+         //        }
+         //     }
+         //  })
+
+         const result1 = dramas.filter((drama) => drama.genre.includes('판타지')).forEach((drama) => document.write(`<p>${drama.title}</p>`))
       </script>
    </body>
 </html>
