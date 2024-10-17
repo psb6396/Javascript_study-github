@@ -10,34 +10,35 @@
                name: '김은아',
                grade: 'A+',
                age: 22,
-               email: 'keaasdf@student.com',
+               email: 'keaasdfunauna@student.com',
             },
             {
                name: '장수민',
                grade: 'B+',
                age: 21,
-               email: 'zssadfasdfm@student.com',
+               email: 'jangsoomin@student.com',
             },
             {
                name: '서우혁',
                grade: 'A',
                age: 23,
-               email: 'susfsadfadfh@student.com',
+               email: 'qwerty@student.com',
             },
             {
                name: '이수훈',
                grade: 'F',
                age: 23,
-               email: 'lssadfsafsafh@student.com',
+               email: 'lssadfsafsafhoon@student.com',
             },
          ]
 
          email_ids = arr.map((student) => {
-            index_of_at = student.email.indexOf('@')
-
-            console.log(index_of_at)
-            // student.email.substr
+            index_of_at = student.email.indexOf('@') //'@'인 부분 인덱스 확인
+            email_id = student.email.substring(0, index_of_at) //처음부터 인덱스까지 짜르기
+            return email_id //email_ids에 담기
          })
+
+         console.log(email_ids)
       </script>
    </head>
    <body></body>

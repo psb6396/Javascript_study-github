@@ -9,7 +9,16 @@
       <h1></h1>
       <script>
          const h1 = document.querySelector('h1')
-         const print = (event) => {}
+         const print = (event) => {
+            console.log(event.altkey)
+            console.log(event.ctrlkey)
+            console.log(event.shiftkey)
+            console.log(event.code)
+            console.log(event.Keycode)
+         }
+
+         document.addEventListener('keydown', print)
+         document.addEventListener('keyup', print)
       </script>
    </body>
 </html>
