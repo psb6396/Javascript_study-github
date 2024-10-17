@@ -31,6 +31,17 @@
                email: 'lsh@student.com',
             },
          ]
+
+         given_name = prompt('학생이름입력')
+
+         info_result = arr
+            .filter((student) => student.name === given_name)
+            .map((student) => {
+               result = `${student.name}, ${student.grade}, ${student.email}`
+               return result
+            })
+
+         document.write(info_result)
       </script>
    </head>
    <body></body>
