@@ -14,6 +14,11 @@
             { date: '2023-09-18', temperature: 30, precipitationChance: 80 },
             { date: '2023-09-19', temperature: 26, precipitationChance: 20 },
          ]
+
+         converted_temperature_data = weatherData.map((one_of_them)=>{
+            one_of_them.temperature = one_of_them.temperature * 9/5 + 32
+            document.write(`날짜:${one_of_them.date}, 기온:${one_of_them.temperature}℉<hr>`)
+         })
       </script>
    </body>
 </html>
