@@ -36,6 +36,14 @@
                },
             ],
          }
+
+
+         product_available = data.products.filter((product) => product.inStock === true).forEach((product)=>{
+            document.write(`${product.productName}:${product.price}원`) 
+         })
+         //document.write(`${product_available.productName}:${product_available.price}`)
+         
       </script>
    </body>
 </html>
+
