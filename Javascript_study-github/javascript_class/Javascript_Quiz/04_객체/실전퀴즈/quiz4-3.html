@@ -14,6 +14,10 @@
             { date: '2023-09-18', temperature: 30, precipitationChance: 80 },
             { date: '2023-09-19', temperature: 26, precipitationChance: 20 },
          ]
+
+         weatherData.forEach((one_of_them)=>{
+            document.write(`날짜:${one_of_them.date}, 강수확률:${one_of_them.precipitationChance}%<hr>`)
+         })
       </script>
    </body>
 </html>
