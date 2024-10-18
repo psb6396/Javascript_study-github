@@ -36,6 +36,13 @@
                },
             ],
          }
+         //3-3. 주어진 제품 목록에서 각 제품의 가격에 10% 할인을 적용한 새로운 배열을 만들어 출력하세요. 
+         //출력할 때는 제품명과 할인된 가격을 함께 출력합니다.(map 메서드를 사용하여 가격을 변환합니다.)
+         discounted_products = data.products.map((product)=> {
+            product.price = product.price * (9/10)
+            document.write(`${product.productName}:${product.price}`)
+         })
+
       </script>
    </body>
 </html>
