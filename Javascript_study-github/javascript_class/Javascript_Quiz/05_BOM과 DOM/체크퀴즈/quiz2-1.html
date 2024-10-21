@@ -7,6 +7,11 @@
    </head>
    <body>
       <button id="myButton">클릭하세요</button>
-      <script></script>
+      <script>
+         button = document.querySelector('#myButton')
+         button.addEventListener('click', () => {
+            alert('버튼이 클릭되었습니다!')
+         })
+      </script>
    </body>
 </html>
