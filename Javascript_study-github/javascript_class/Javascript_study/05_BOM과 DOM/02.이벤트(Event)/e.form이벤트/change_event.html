@@ -25,6 +25,13 @@
             console.log(options[index].textContent) // 선택한 option객체의 text를 가지고온다.
 
             p.textContent = `선택: ${options[index].textContent}`
+
+            //value 속성 안에 있는 값 가져오기
+            const selectedFood = event.currentTarget.value
+            console.log('selectedFood:', selectedFood)
+
+            const selectedFood2 = event.target.value
+            console.log('selectedFood2:', selectedFood2)
          })
       </script>
    </body>
