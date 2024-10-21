@@ -15,6 +15,20 @@
 
       <div id="result">선택된 과일: apple</div>
 
-      <script></script>
+      <script>
+         result = document.querySelector('#result')
+         fruits = document.querySelector('#fruits')
+
+         fruits.addEventListener('change', () => {
+            result.textContent = `선택된 과일:${fruits[this.value]}`
+         })
+
+         // console.log(fruits)
+         // fruits.forEach((fruit) => {
+         //    fruit.addEventListener('click', (e) => {
+         //       result.textContent = `선택된 과일: ${e.currentTarget.value}`
+         //    })
+         // })
+      </script>
    </body>
 </html>
