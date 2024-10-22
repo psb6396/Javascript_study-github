@@ -13,7 +13,7 @@
             color: red;
             font-size: 0.9em;
             font-weight: bold;
-            display: none;
+            /* display: none; */
          }
       </style>
    </head>
@@ -23,13 +23,13 @@
             <label for="id">아이디</label>
             <input type="text" id="id" />
             <br />
-            <span class="id-msg">아이디를 입력해주세요.</span>
+            <span class="id-msg" style="display: none">아이디를 입력해주세요.</span>
          </div>
          <div>
             <label for="pw">비밀번호</label>
             <input type="password" id="password" />
             <br />
-            <span class="pw-msg">비밀번호를 입력해주세요.</span>
+            <span class="pw-msg" style="display: none">비밀번호를 입력해주세요.</span>
          </div>
          <div>
             <button type="submit" class="btn-login">로그인</button>
@@ -43,6 +43,20 @@
          const pw = document.querySelector('#password')
          const idMsg = document.querySelector('.id-msg')
          const pwMsg = document.querySelector('.pw-msg')
+
+         button.addEventListener('click', () => {
+            if (id.value === '') {
+               // 아무것도 들어있지 않은 경우
+               idMsg.setAttribute('style', "display:'' ")
+            } else {
+               idMsg.setAttribute('style', 'display:none ')
+            }
+            if (pw.value === '') {
+               pwMsg.setAttribute('style', "display:'' ")
+            } else {
+               pwMsg.setAttribute('style', 'display:none ')
+            }
+         })
       </script>
    </body>
 </html>
