@@ -10,7 +10,11 @@
       <a href="https://www.google.com/">링크2</a>
 
       <script>
-         //작성
+         links = document.querySelectorAll('a')
+         links.forEach((link) => {
+            link.setAttribute('target', '_blank')
+         })
+         console.log(links)
       </script>
    </body>
 </html>

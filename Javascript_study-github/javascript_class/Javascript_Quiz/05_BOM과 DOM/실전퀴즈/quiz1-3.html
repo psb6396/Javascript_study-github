@@ -9,7 +9,13 @@
       <div id="container"></div>
 
       <script>
-         //작성
+         p_tag = document.createElement('p')
+         p_tag.textContent = '안녕하세요'
+         p_tag.style.color = 'red'
+         p_tag.style.fontWeight = 'bold'
+
+         div = document.querySelector('#container')
+         div.appendChild(p_tag)
       </script>
    </body>
 </html>
