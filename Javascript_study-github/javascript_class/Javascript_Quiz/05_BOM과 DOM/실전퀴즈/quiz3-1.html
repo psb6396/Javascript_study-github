@@ -19,6 +19,21 @@
          const select = document.querySelector('select')
          const input = document.querySelector('input')
          const span = document.querySelector('span')
+
+         select.addEventListener('change', (event) => {
+            options = event.currentTarget.options
+            index = event.currentTarget.options.selectedIndex
+
+            currentValue = input.value
+            if (options[index].value === '10') {
+               constValue = currentValue * 10
+            } else if (options[index].value === '0.01') {
+               constValue = currentValue * 0.01
+            } else {
+               constValue = currentValue * 0.393701
+            }
+            span.textContent = constValue
+         })
       </script>
    </body>
 </html>
