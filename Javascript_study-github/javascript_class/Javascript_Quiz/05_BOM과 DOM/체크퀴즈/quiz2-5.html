@@ -19,8 +19,11 @@
          result = document.querySelector('#result')
          fruits = document.querySelector('#fruits')
 
-         fruits.addEventListener('change', () => {
-            result.textContent = `선택된 과일:${fruits[this.value]}`
+         fruits.addEventListener('change', (event) => {
+            const options = event.currentTarget.options
+            const index = event.currentTarget.options.selectedIndex
+
+            result.textContent = `선택된 과일: ${options[index].value}`
          })
 
          // console.log(fruits)
