@@ -8,6 +8,17 @@
    <body>
       <script>
          //비동기 사례
+         console.log('Hello')
+
+         setTimeout(() => {
+            console.log('Bye')
+         }, 3000)
+
+         console.log('hello agn')
+
+         sayGoodBye(() => {
+            console.log('Hello Agn')
+         })
       </script>
    </body>
 </html>
