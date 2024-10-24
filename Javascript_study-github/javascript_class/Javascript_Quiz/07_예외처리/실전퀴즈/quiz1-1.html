@@ -11,9 +11,10 @@
             try {
                if (age < 18) {
                   //예외 강제로 발생시킴
+                  throw new Error('age exception')
                }
             } catch (exception) {
-               return
+               return alert('18세 미만은 관람 불가입니다.')
             }
          }
 
