@@ -14,7 +14,9 @@
                   throw new Error('age exception')
                }
             } catch (exception) {
-               return alert('18세 미만은 관람 불가입니다.')
+               return //예외 발생시 return문을 만나서 함수 종료가 되기직전에 finally가 실행된다
+            } finally {
+               alert('18세 미만은 관람 불가입니다.')
             }
          }
 

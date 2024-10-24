@@ -22,7 +22,7 @@
          function accountTransfer(accountNumber, money) {
             try {
                //1. accountNumber이 null, undefined 혹은 빈문자열 일때 'no accountNumber' 강제 예외 발생
-               if (accountNumber === (null || undefined || '')) {
+               if (!accountNumber) {
                   throw new Error('no accountNumber')
                }
 
