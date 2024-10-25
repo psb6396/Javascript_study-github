@@ -41,11 +41,11 @@ const getPlayingMovies = async (url) => {
             rowHtml += `<div class="col-sm-3 p-3">
                      <div class="card">
                         <a href="./detail.html?movie_id=${movie.id}">
-                           <img src="..." class="card-img-top poster" alt="${movie.title}" />
+                           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top poster" alt="${movie.title}" />
                         </a>
                         <div class="card-body">
                            <p class="card-text title">${movie.title}</p>
-                           <p class="card-text average">${movie.vote_aveage.toFixed(1)}</p>
+                           <p class="card-text average">${movie.vote_average.toFixed(1)}</p>
                         </div>
                      </div>
                   </div>`
