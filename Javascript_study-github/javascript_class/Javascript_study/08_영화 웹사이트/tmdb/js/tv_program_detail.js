@@ -19,17 +19,17 @@ const get_detail_tv_program = async (tv_program_detailUrl) => {
    try {
       const response = await fetch(tv_program_detailUrl, options)
       const data = await response.json()
-
+      console.log(data)
       const imgSrc = `https://image.tmdb.org/t/p/w200${data.poster_path}`
 
       const rowHtml = `<div class="detail">
                   <img src="${imgSrc}" alt="" />
-                  <p>제목</p>
-                  <p>원제목,언어</p>
-                  <p>처음방송날짜</p>
-                  <p>최근방송날짜</p>
-                  <p>줄거리</p>
-                  <p>평점</p>
+                  <p>제목:${data.name}</p>
+                  <p>원제목:${data.original_name}, 언어:${data.original_language}</p>
+                  <p>처음방송날짜 : ${data.first_air_date}</p>
+                  <p>최근방송날짜 : ${data.last_air_date}</p>
+                  <p>줄거리 : ${data.overview}</p>
+                  <p>평점: ${data.vote_average.toFixed(1)}</p>
                </div>
                <div class="replay">
                   <p>다시보기</p>
