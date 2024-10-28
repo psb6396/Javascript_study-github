@@ -27,8 +27,45 @@ main .container {
    padding: 40px 0;
 }
 
+/* card 길이 안맞는 부분 수정 */
+main .container .row .card {
+   height: 100%;
+}
+
+main .container .row .card a {
+   height: 80%;
+}
+
+main .container .row .card img {
+   height: 100%;
+   object-fit: cover;
+}
+
+/* detail.html */
+main .container .movie-detail > ul.movie-info,
+p {
+   margin-bottom: 10px !important;
+}
+main .container ul.movie-info {
+   display: flex;
+}
+
+main .container ul.movie-info li {
+   padding-right: 13px;
+}
+
 footer {
    height: 100px;
    line-height: 100px;
    background-color: #f2f2f2;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+   .col-sm-9 {
+      width: 60%;
+   }
+
+   .col-sm-3 {
+      width: 40%;
+   }
 }
