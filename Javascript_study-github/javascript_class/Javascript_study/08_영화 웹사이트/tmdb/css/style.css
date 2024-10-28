@@ -68,4 +68,12 @@ footer {
    .col-sm-3 {
       width: 40%;
    }
+
+   main .container ul.movie-info {
+      display: initial;
+   }
+
+   main .container ul.movie-info li {
+      padding-bottom: 10px;
+   }
 }

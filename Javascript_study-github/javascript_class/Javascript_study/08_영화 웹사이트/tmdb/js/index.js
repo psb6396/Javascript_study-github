@@ -24,7 +24,7 @@ const url = 'https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=
 const getPlayingMovies = async (url) => {
    try {
       const response = await fetch(url, options) //서버에서 데이터 가져올때까지 기다린다
-      console.log(response) // 기다렸다가 다 가지고 오면 실행
+      // console.log(response) // 기다렸다가 다 가지고 오면 실행
 
       const data = await response.json() //await를 지정하는 이유: fetch는 비동기적으로 실행되므로 서버에서 request 해오는 딜레이 시간중에 실행된다.
       const results = data.results
