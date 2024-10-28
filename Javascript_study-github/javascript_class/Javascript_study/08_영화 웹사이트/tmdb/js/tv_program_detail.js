@@ -13,12 +13,30 @@ const urlParams = new URLSearchParams(window.location.search)
 const tv_program_id = urlParams.get('tv_program_id')
 const tv_program_detailUrl = `https://api.themoviedb.org/3/tv/${tv_program_id}?language=ko_KR`
 
+const mainContainer = document.querySelector('.tv-card')
+
 const get_detail_tv_program = async (tv_program_detailUrl) => {
    try {
       const response = await fetch(tv_program_detailUrl, options)
       const data = await response.json()
 
-      console.log(data)
+      const imgSrc = `https://image.tmdb.org/t/p/w200${data.poster_path}`
+
+      const rowHtml = `<div class="detail">
+                  <img src="${imgSrc}" alt="" />
+                  <p>제목</p>
+                  <p>원제목,언어</p>
+                  <p>처음방송날짜</p>
+                  <p>최근방송날짜</p>
+                  <p>줄거리</p>
+                  <p>평점</p>
+               </div>
+               <div class="replay">
+                  <p>다시보기</p>
+                  <p>다시보기</p>
+               </div>`
+
+      mainContainer.innerHTML += rowHtml
    } catch (error) {
       console.log('에러 발생:', error)
    }
