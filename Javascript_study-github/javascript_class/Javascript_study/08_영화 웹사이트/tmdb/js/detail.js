@@ -20,7 +20,7 @@ const getDetailMovie = async (movieDetailUrl) => {
       const response = await fetch(movieDetailUrl, options)
       const data = await response.json()
 
-      console.log(data)
+      // console.log(data)
       const imgSrc = `https://image.tmdb.org/t/p/w300${data.poster_path}`
 
       const rowHtml = `<div class="row">

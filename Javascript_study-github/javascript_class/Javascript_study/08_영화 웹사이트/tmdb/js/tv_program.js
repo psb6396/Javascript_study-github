@@ -26,7 +26,7 @@ const get_tv_programs = async (url) => {
 
             const tv_program = results[index]
             rowHtml += `<div class="poster">
-                        <a href="./detail.html?movie_id=${tv_program.id}">
+                        <a href="./tv_program_detail.html?tv_program_id=${tv_program.id}">
                             <img src="https://image.tmdb.org/t/p/w200${tv_program.poster_path}" alt="" />
                         </a>
                         </div>
@@ -46,14 +46,3 @@ const get_tv_programs = async (url) => {
 }
 
 get_tv_programs(url)
-
-//현재 페이지의 url을 사용하여 URLSearchParams 객체 생성
-const urlParams = new URLSearchParams(window.location.search)
-
-//특정 쿼리 스트링 값 가져오기 (예: ?movie_id = 573435)
-const movieId = urlParams.get('movie_id')
-
-fetch('https://api.themoviedb.org/3/tv/124364?language=ko_KR', options)
-   .then((res) => res.json())
-   .then((res) => console.log(res))
-   .catch((err) => console.error(err))
