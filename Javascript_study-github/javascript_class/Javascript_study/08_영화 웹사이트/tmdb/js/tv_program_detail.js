@@ -32,8 +32,7 @@ const get_detail_tv_program = async (tv_program_detailUrl) => {
                   <p>평점: ${data.vote_average.toFixed(1)}</p>
                </div>
                <div class="replay">
-                  <p>다시보기</p>
-                  <p>다시보기</p>
+                  
                </div>`
 
       mainContainer.innerHTML += rowHtml
