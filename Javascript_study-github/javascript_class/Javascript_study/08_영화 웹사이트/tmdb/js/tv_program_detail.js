@@ -21,6 +21,10 @@ const get_detail_tv_program = async (tv_program_detailUrl) => {
       const data = await response.json()
       console.log(data)
       const imgSrc = `https://image.tmdb.org/t/p/w200${data.poster_path}`
+      replay = ''
+      data.seasons.forEach((season) => {
+         replay += `<p>${season.name} 보러가기 , ${season.air_date}</p>`
+      })
 
       const rowHtml = `<div class="detail">
                   <img src="${imgSrc}" alt="" />
@@ -31,8 +35,9 @@ const get_detail_tv_program = async (tv_program_detailUrl) => {
                   <p>줄거리 : ${data.overview}</p>
                   <p>평점: ${data.vote_average.toFixed(1)}</p>
                </div>
+               <hr>
                <div class="replay">
-                  
+                  ${replay}
                </div>`
 
       mainContainer.innerHTML += rowHtml
