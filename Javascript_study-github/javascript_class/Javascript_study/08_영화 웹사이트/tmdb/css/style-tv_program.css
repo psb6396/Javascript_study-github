@@ -25,15 +25,28 @@ p {
 }
 main .container {
    margin: 0 auto;
+   align-items: center;
 }
 
 /* card 길이 안맞는 부분 수정 */
 main .container .row .card {
+   display: flex;
+   flex-direction: row;
    width: 500px;
+   margin-left: 50px;
 }
 
 main .container .row .card a {
    width: 100%;
+}
+
+main .container .row .card .info {
+   font-size: 1.5em;
+}
+
+main .container .row {
+   margin: 50px;
+   padding: 0;
 }
 
 footer {
